@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mod id="797b4868-ee6c-464b-a708-ab85b157ee67" version="1">
+  <Properties>
+    <Name>[BC] Endgame Bonuses</Name>
+    <Stability>Alpha</Stability>
+    <Teaser>[BC] Endgame Bonuses</Teaser>
+    <Description>[BC] Endgame Bonuses</Description>
+    <Authors>Limerickarcher</Authors>
+    <HideSetupGame>0</HideSetupGame>
+    <AffectsSavedGames>1</AffectsSavedGames>
+    <MinCompatibleSaveVersion>0</MinCompatibleSaveVersion>
+    <SupportsSinglePlayer>1</SupportsSinglePlayer>
+    <SupportsMultiplayer>0</SupportsMultiplayer>
+    <SupportsHotSeat>0</SupportsHotSeat>
+    <SupportsMac>1</SupportsMac>
+    <ReloadAudioSystem>0</ReloadAudioSystem>
+    <ReloadLandmarkSystem>0</ReloadLandmarkSystem>
+    <ReloadStrategicViewSystem>0</ReloadStrategicViewSystem>
+    <ReloadUnitSystem>0</ReloadUnitSystem>
+  </Properties>
+  <Dependencies />
+  <References />
+  <Blocks />
+  <Files>
+    <File md5="BDE66C4391F445513586F42ECA0C8A50" import="0">EndGame_Bonuses.lua</File>
+    <File md5="8B31E6B51F837E484DCCDC74C05B2ADA" import="0">EndGame_Bonuses_Defines.sql</File>
+    <File md5="E5CCC5E6C57D82CE12AD7D39A1F998D4" import="0">EndGame_GameText.xml</File>
+    <File md5="F3E8937B7A2F2DC590F4499765A4710D" import="1">UnitSpawnHandler.lua</File>
+  </Files>
+  <Actions>
+    <OnModActivated>
+      <UpdateDatabase>EndGame_GameText.xml</UpdateDatabase>
+      <UpdateDatabase>EndGame_Bonuses_Defines.sql</UpdateDatabase>
+    </OnModActivated>
+  </Actions>
+  <EntryPoints>
+    <EntryPoint type="InGameUIAddin" file="EndGame_Bonuses.lua">
+      <Name>EndGame Bonuses</Name>
+      <Description>EndGame Bonuses</Description>
+    </EntryPoint>
+  </EntryPoints>
+</Mod>

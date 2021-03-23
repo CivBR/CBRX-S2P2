@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Created by ModBuddy on 12/30/2019 12:29:36 PM -->
+<GameData>
+	<Language_en_US>
+		<Row Tag="TXT_KEY_BUILDING_LIME_DUMMY">
+			<Text>Dummy Building for EndGame Bonuses</Text>
+		</Row>
+		<Row Tag="TXT_KEY_POLICY_LIME_TECH_DUMMY_1">
+			<Text>1 Free Tech</Text>
+		</Row>
+		<Row Tag="TXT_KEY_POLICY_LIME_TECH_DUMMY_2">
+			<Text>2 Free Techs</Text>
+		</Row>
+		<Row Tag="TXT_KEY_POLICY_LIME_TECH_DUMMY_3">
+			<Text>3 Free Techs</Text>
+		</Row>
+		<Row Tag="TXT_KEY_POLICY_LIME_TECH_DUMMY_4">
+			<Text>4 Free Techs</Text>
+		</Row>
+		<Row Tag="TXT_KEY_POLICY_LIME_TECH_DUMMY_5">
+			<Text>5 Free Techs</Text>
+		</Row>
+		<Row Tag="TXT_KEY_POLICY_LIME_TECH_DUMMY_6">
+			<Text>6 Free Techs</Text>
+		</Row>
+		<Row Tag="TXT_KEY_POLICY_LIME_TECH_DUMMY_7">
+			<Text>7 Free Techs</Text>
+		</Row>
+		<Row Tag="TXT_KEY_POLICY_LIME_TECH_DUMMY_8">
+			<Text>8 Free Techs</Text>
+		</Row>
+		<Row Tag="TXT_KEY_POLICY_LIME_TECH_DUMMY_9">
+			<Text>9 Free Techs</Text>
+		</Row>
+		<Row Tag="TXT_KEY_POLICY_LIME_TECH_DUMMY_10">
+			<Text>10 Free Techs</Text>
+		</Row>
+	</Language_en_US>
+</GameData>
