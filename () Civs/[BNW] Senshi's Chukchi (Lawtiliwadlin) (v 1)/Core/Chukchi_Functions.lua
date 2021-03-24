@@ -55,7 +55,7 @@ function SenshiChukchiPromotion(playerID, unitID)
 
   -- promoted Chukchi units provide culture and damage adjacent enemies
   if pPlayer:GetCivilizationType() == iCiv then
-    local iCultChange = math.max(0, (pUnit:GetExperience() - 30))
+    local iCultChange = math.max(0, (pUnit:GetExperience() - 20))
     pPlayer:ChangeJONSCulture(iCultChange)
     local pPlot = pUnit:GetPlot()
     for iDirection = 0, iNumDirections, 1 do
@@ -180,7 +180,7 @@ function ManageYarangaXP(playerID)
             local pPlot = pCity:GetCityIndexPlot(i)
 			if pPlot then
 				if pPlot:IsWater() and (pPlot:GetResourceType() > - 1) and pCity:IsWorkingPlot(pPlot) then
-				  iNumDummies = iNumDummies + 5
+				  iNumDummies = iNumDummies + 4
 				end
 			end
           end
@@ -189,7 +189,7 @@ function ManageYarangaXP(playerID)
           for i = 0, pCity:GetNumCityPlots() - 1, 1 do
             local pPlot = pCity:GetCityIndexPlot(i)
             if tBonusRes[pPlot:GetResourceType()] and pCity:IsWorkingPlot(pPlot) then
-              iNumDummies = iNumDummies + 3
+              iNumDummies = iNumDummies + 2
             end
           end
           pCity:SetNumRealBuilding(iXPDummy, iNumDummies)
