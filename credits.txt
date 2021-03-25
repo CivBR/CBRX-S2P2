@@ -23,7 +23,6 @@ Coiot
 -----------------------
 	Blue Cassette
 	Dev Team Head
-	Testing
 	Religion Mod Overhaul
 	Website Manager
 	Debugging, Testing, Code Rewrites
