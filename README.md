@@ -7,11 +7,10 @@ has been an integral part of this community and this list
 does not adequately recognize any of them for the hours
 and hours of hard work they have put in.
 
-==========================================
-============ Development Team ============
+# Development Team
+
 A huge thanks to all of these individuals
 for their hard work in making this possible.
-==========================================
 
 ---
 
@@ -128,16 +127,16 @@ for their hard work in making this possible.
     Project Advisor
     Voting Assistant
 
-==========================================
-================= Modders ================
+# Modders
+
 Each and every one of our modders makes
 this possible, without them the CBR could
 not exist. Many of them had assistance
 that we could not cover here, please visit
 their respective pages for more detailed
 credits for each individual mod.
-==========================================
-Civilizations
+
+## Civilizations
 
 ---
 
@@ -264,10 +263,9 @@ Civilizations
   whoward69
 - Single Unit Graphics
   Nutty
-  ==========================================
 
-==========================================
-============= Special Thanks =============
+## Special Thanks
+
 The r/civbattleroyale Moderation Team
 The CBRD Discord Staff
 Arilasqueto
@@ -277,4 +275,3 @@ Shaggysnorlax
 Timrtabor
 X-Rok
 Many others
-==========================================
