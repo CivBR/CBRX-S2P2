@@ -21,7 +21,7 @@
 	<Language_en_US>
 		<Delete Tag="TXT_KEY_BELIEF_TREASURY_MANDATE" />
 		<Row Tag="TXT_KEY_BELIEF_TREASURY_MANDATE">
-			<Text>2 [ICON_GOLD] Gold for each foreign City following this Religion</Text>
+			<Text>+2 [ICON_GOLD] Gold for each foreign City following this Religion</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BELIEF_TREASURY_MANDATE_SHORT">
 			<Text>Treasury Mandate</Text>

@@ -27,7 +27,7 @@
 
 	<Language_en_US>
 		<Row Tag="TXT_KEY_BELIEF_SKYREALM">
-			<Text>+2 [ICON_PEACE] and +1 [ICON_CULTURE] Faith from Mountain Tiles.</Text>
+			<Text>+2 [ICON_PEACE] Faith and +1 [ICON_CULTURE] Culture from Mountain Tiles.</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BELIEF_SKYREALM_SHORT">
 			<Text>Sky Realm</Text>

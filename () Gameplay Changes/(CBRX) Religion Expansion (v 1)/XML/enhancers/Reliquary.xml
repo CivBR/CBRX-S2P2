@@ -5,7 +5,7 @@
 	<!-- Gain 50 Faith (on Quick Speed) whenever a Great Person is expended -->
 	<Beliefs>
 		<Update>
-			<Set GreatPersonExpendedFaith="38" />
+			<Set GreatPersonExpendedFaith="40" />
 			<Where Type="BELIEF_RELIQUARY" />
 		</Update>
 	</Beliefs>

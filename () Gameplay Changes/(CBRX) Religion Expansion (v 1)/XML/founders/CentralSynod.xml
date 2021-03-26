@@ -26,7 +26,7 @@
 
 	<Language_en_US>
 		<Row Tag="TXT_KEY_BELIEF_CENTRALSYNOD">
-			<Text>+5 Science from the Holy City. +1% [ICON_SCIENCE] Science for each follower (max +10%)</Text>
+			<Text>+5 [ICON_SCIENCE]  Science from the Holy City. +1% [ICON_SCIENCE] Science for each follower (max +10%)</Text>
 		</Row>
 	<Row Tag="TXT_KEY_BELIEF_CENTRALSYNOD_SHORT">
 			<Text>Central Synod</Text>

@@ -13,7 +13,7 @@
 
 	<Language_en_US>
 		<Row Tag="TXT_KEY_BELIEF_NONSECTARIANISM">
-			<Text>Great Person tile improvements provide additional +4 of the appropriate yield</Text>
+			<Text>All Religious buildings give +4 [ICON_TOURISM] Tourism</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BELIEF_NONSECTARIANISM_SHORT">
 			<Text>Non-Sectarianism </Text>

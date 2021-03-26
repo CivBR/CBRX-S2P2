@@ -19,7 +19,7 @@
 		<Row>
 			<BeliefType>BELIEF_THRIFT</BeliefType>
 			<BuildingClassType>BUILDINGCLASS_MONUMENT</BuildingClassType>
-			<YieldType>YIELD_CULTURE</YieldType>
+			<YieldType>YIELD_FAITH</YieldType>
 			<YieldChange>1</YieldChange>
 		</Row>
 	</Belief_BuildingClassYieldChanges>
@@ -27,7 +27,7 @@
 	<Language_en_US>
 	<Delete Tag="TXT_KEY_BELIEF_THRIFT" />
 		<Row Tag="TXT_KEY_BELIEF_THRIFT">
-			<Text>+1 [ICON_GOLD] Gold and +1 [ICON_CULTURE] Culture from Monuments</Text>
+			<Text>+1 [ICON_GOLD] Gold and +1 [ICON_FAITH] Faith from Monuments</Text>
 		</Row>
 		<Delete Tag="TXT_KEY_BELIEF_THRIFT_SHORT" />
 		<Row Tag="TXT_KEY_BELIEF_THRIFT_SHORT">

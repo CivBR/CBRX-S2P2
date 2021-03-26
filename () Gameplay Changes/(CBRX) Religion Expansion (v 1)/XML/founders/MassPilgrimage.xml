@@ -12,7 +12,7 @@
   	<Language_en_US>
 	  <Delete Tag="TXT_KEY_BELIEF_PILGRIMAGE" />
 		<Row Tag="TXT_KEY_BELIEF_PILGRIMAGE">
-			<Text>1 Faith for each foreign City following this Religion</Text>
+			<Text>+1 [ICON_PEACE] Faith for each foreign City following this Religion</Text>
 		</Row>
 		<Delete Tag="TXT_KEY_BELIEF_PILGRIMAGE_SHORT" />
 		<Row Tag="TXT_KEY_BELIEF_PILGRIMAGE_SHORT">

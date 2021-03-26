@@ -49,7 +49,7 @@
 	</Belief_ImprovementYieldChanges>
 	<Language_en_US>
 		<Row Tag="TXT_KEY_BELIEF_SOCIETY_OF_THE_FAITHFUL">
-			<Text>+2 [ICON_FOOD] Food, +5 [ICON_PRODUCTION] Production, +5 [ICON_GOLD] Gold, +5 [ICON_SCIENCE] Science, +5 [ICON_CULTURE] Culture and +5 [ICON_PEACE] Faith for Holy Sites.</Text>
+			<Text>+5 [ICON_FOOD] Food, +5 [ICON_PRODUCTION] Production, +5 [ICON_GOLD] Gold, +5 [ICON_SCIENCE] Science, +5 [ICON_CULTURE] Culture and +5 [ICON_PEACE] Faith for Holy Sites.</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BELIEF_SOCIETY_OF_THE_FAITHFUL_SHORT">
 			<Text>Society Of The Faithful</Text>

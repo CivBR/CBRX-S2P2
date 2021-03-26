@@ -25,7 +25,7 @@
   
   	<Language_en_US>
 		<Row Tag="TXT_KEY_BELIEF_ARDENTINQUIRY">
-			<Text>1 [ICON_SCIENCE] Science and 1 [ICON_CULTURE] Culture for each foreign City following this Religion</Text>
+			<Text>+1 [ICON_SCIENCE] Science and +1 [ICON_CULTURE] Culture for each foreign City following this Religion</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BELIEF_ARDENTINQUIRY_SHORT">
 			<Text>Ardent Inquiry</Text>

@@ -20,7 +20,7 @@
 
 	<Language_en_US>
 		<Row Tag="TXT_KEY_BELIEF_OPENSKY">
-			<Text>+1 [ICON_CULTURE] Culture and +1 [ICON_FAITH] Faith from all Snow Tiles.</Text>
+			<Text>+1 [ICON_PEACE] from Plain Tiles.</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BELIEF_OPENSKY_SHORT">
 			<Text>Open Sky</Text>

@@ -27,7 +27,7 @@
 
 	<Language_en_US>
 		<Row Tag="TXT_KEY_BELIEF_INTERFAITHDIALOGUE">
-			<Text>4 [ICON_SCIENCE] Science from trade routes.</Text>
+			<Text>+4 [ICON_SCIENCE] Science from trade routes.</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BELIEF_INTERFAITHDIALOGUE_SHORT">
 			<Text>Interfaith Dialogue</Text>
