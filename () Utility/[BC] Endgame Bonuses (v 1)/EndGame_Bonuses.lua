@@ -75,10 +75,10 @@ endgameBonuses['CIVILIZATION_EW_PARG'] = {pop=3, food=1, prod=2, cul=2, sci=6, s
 endgameBonuses['CIVILIZATION_THP_NORTHYUAN'] = {pop=4, food=2, prod=2, cul=1, sci=6, stg=50, gold=8, mil=3, city=4, grp=1, fai=3, reli=0}
 endgameBonuses['CIVILIZATION_SENSHI_CHUKCHI'] = {pop=9, food=5, prod=4, cul=4, sci=8, stg=500, gold=1, mil=8, city=9, grp=3, fai=4, reli=0}
 endgameBonuses['CIVILIZATION_PB_TAIPING'] = {pop=1, food=1, prod=1, cul=1, sci=0, stg=409, gold=15, mil=1, city=1, grp=0, fai=1, reli=1}
-endgameBonuses['CIVILIZATION_ORG_MALACCA'] = {pop=10, food=5, prod=5, cul=5, sci=10, stg=1000, gold=5, mil=10, city=10, grp=4, fai=4, reli=0}
+endgameBonuses['CIVILIZATION_ORG_MALACCA'] = {pop=8, food=5, prod=5, cul=5, sci=10, stg=800, gold=5, mil=10, city=10, grp=4, fai=4, reli=0}
 endgameBonuses['CIVILIZATION_CL_KULIN'] = {pop=10, food=5, prod=5, cul=5, sci=10, stg=100, gold=2, mil=9, city=11, grp=5, fai=5, reli=1}
 endgameBonuses['CIVILIZATION_DENEFIRSTNATION'] = {pop=7, food=3, prod=3, cul=3, sci=7, stg=60, gold=8, mil=5, city=8, grp=3, fai=3, reli=1}
-endgameBonuses['CIVILIZATION_JWW_RIO_GRANDE'] = {pop=6, food=3, prod=2, cul=3, sci=6, stg=455, gold=9, mil=5, city=6, grp=2, fai=1, reli=0}
+endgameBonuses['CIVILIZATION_JWW_RIO_GRANDE'] = {pop=7, food=3, prod=2, cul=3, sci=6, stg=455, gold=9, mil=5, city=6, grp=2, fai=1, reli=0}
 endgameBonuses['CIVILIZATION_EW_NEUTRAL'] = {pop=1, food=0, prod=0, cul=0, sci=0, stg=10, gold=20, mil=0, city=1, grp=0, fai=0, reli=0}
 endgameBonuses['CIVILIZATION_SENSHI_MARAJO'] = {pop=4, food=4, prod=4, cul=4, sci=4, stg=40, gold=2, mil=4, city=7, grp=4, fai=2, reli=1}
 
