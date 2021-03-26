@@ -76,7 +76,7 @@
 
 	<Language_en_US>
 		<Row Tag="TXT_KEY_BELIEF_ONEWITHNATURE">
-			<Text>+2 [ICON_CULTURE] Culture and 2 [ICON_PEACE] Faith from unimproved features.</Text>
+			<Text>+2 [ICON_CULTURE] Culture and +2 [ICON_PEACE] Faith from unimproved features.</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BELIEF_ONEWITHNATURE_SHORT">
 			<Text>One with Nature</Text>

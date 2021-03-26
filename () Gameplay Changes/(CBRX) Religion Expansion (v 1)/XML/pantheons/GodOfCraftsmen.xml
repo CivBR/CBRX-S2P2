@@ -22,7 +22,7 @@
 	<Language_en_US>
 	<Delete Tag="TXT_KEY_BELIEF_GODOFCRAFTSMEN" />
 		<Row Tag="TXT_KEY_BELIEF_GODOFCRAFTSMEN">
-			<Text>2 [ICON_PRODUCTION] Production from Stone Works</Text>
+			<Text>+2 [ICON_PRODUCTION] Production from Stone Works</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BELIEF_GODOFCRAFTSMEN_SHORT">
 			<Text>God of Craftsmen</Text>
