@@ -5,38 +5,36 @@
 	<!--   International Popup -->
 	<!--=======================================================================================================================-->
 
-	<Instance Offset="0,0" Name="PlayerEntryInstance" Size="420,90" >
-		<Box Size="926,90" Anchor="L,T" Color="Black.0" ID="PlayerEntryBox">
-			<Box  Size="936,82" Anchor="C,C" Offset="10,0" ID="PlayerEntryAnimGrid" />
-			<AlphaAnim ID="PlayerEntryAnim" Anchor="L,T" Offset="5,0" Size="956,85" TextureOffset="0.0"  Pause="0" Cycle="Bounce" Speed="0" AlphaStart=".75" AlphaEnd=".75" Hidden="0">
-				<Grid  Size="956,85" Anchor="C,C" Offset="0,0" Style="GridGlass16" ID="PlayerEntryAnimGrid2" />
-				<Grid  Size="956,85" Anchor="C,C" Offset="0,0" Style="Grid9Gold8" ID="PlayerEntryAnimGridGA" />
-				<Grid  Size="956,85" Anchor="C,C" Offset="0,0" Style="Grid9Red8" ID="PlayerEntryAnimGridDA" />
-				<Grid  Size="956,85" Anchor="C,C" Offset="0,0" Style="Grid9Science8" ID="PlayerEntryAnimGridNA" />
-			</AlphaAnim>
+	<Instance Offset="0,0" Name="PlayerEntryInstance" Size="420,120" >
+		<Box Size="920,120" Anchor="L,T" Color="Black.0" ID="PlayerEntryBox">
+			<Box  Size="930,114" Anchor="C,C" Offset="5,-4" ID="PlayerEntryAnimGrid" Hidden="1" />
+			<Image  Texture="BannerBodyWorld.dds" Size="930.114" Anchor="C,C" Offset="5,-4" ID="PlayerEntryBannerBackground" Hidden="0" />
 
 			<!-- Leader Portrait -->
-			<Image Anchor="L,C" Size="64,64" Offset="4,0"  Texture="Assets/UI/Art/Icons/IconFrame64.dds"  >
+			<Image Anchor="L,C" Size="64,64" Offset="4,5"  Texture="Assets/UI/Art/Icons/IconFrame64.dds"  >
 				<Image Anchor="L,C" Offset="0,0" Size="64,64"   Texture="Assets/UI/Art/Icons/LeaderPortraits512.dds"  ID="Portrait"/>
 			</Image>
 			<!-- Civ Icon -->
-			<Box Color="255,255,255,0" Anchor="L,C" Offset="64,0" Size="32.32">
+			<Box Color="255,255,255,0" Anchor="L,C" Offset="64,5" Size="32.32">
 				<Image ID="CivIconBG" Size="32.32" Anchor="C,C" Offset="0,0" TextureOffset="32,0" Texture="CivIconBGSizes.dds" />
 				<Image ID="CivIconShadow" Size="24.24" Anchor="C,C" Offset="1,1" Texture="CivSymbolAtlas16.dds" Color="Black.128"/>
 				<Image ID="Icon" Size="24.24" Offset="0,0"  Anchor="C,C" Texture="CivSymbolsColor256.dds" />
-				<Label Anchor="L,C" Offset="0,10" Font="TwCenMT14" ColorSet="Beige_Black_Alpha" FontStyle="Shadow" String="[ICON_GOLDEN_AGE]" ID="AgeIcon"/>
+				<Label Anchor="L,C" Offset="0,10" Font="TwCenMT14" ColorSet="Beige_Black_Alpha" FontStyle="Shadow" String="[ICON_GOLDEN_AGE]" ID="AgeIcon" Hidden="1"/>
 			</Box>
-			<Stack Anchor="L,C" Offset="98,0" Padding="12" StackGrowth="Bottom" ID="RightInfoStack" Hidden="0">
-				<Image Anchor="L,C" Offset="-62,0" Texture="bar900x2.dds" Size="900.1" Hidden="0"/>
-				<Label Anchor="L,C" Offset="-5,-5" Font="TwCenMT20" ColorSet="Beige_Black_Alpha" FontStyle="Shadow" String="Player Name" ID="PlayerNameText"/>
+			<Image Anchor="L,C" Offset="0,-32" Texture="WorldBannerHeaderDesature.dds" ID="WorldBannerHeader" Size="476.52" Hidden="0">
+				<Label Anchor="L,C" Offset="100,-10" Font="TwCenMT20" ColorSet="Beige_Black_Alpha" FontStyle="Shadow" String="Player Name" ID="PlayerNameText"/>
+			</Image>
+			<Stack Anchor="L,C" Offset="98,5" Padding="12" StackGrowth="Bottom" ID="RightInfoStack" Hidden="0">
+				<Image Anchor="L,C" Offset="-62,-40" Texture="bar900x2.dds" Size="900.1" Hidden="0"/>
 				<Label Anchor="L,C" Offset="1,2" Font="TwCenMT18" ColorSet="Beige_Black_Alpha" FontStyle="Shadow" String="Player Name" ID="PlayerCivNameText"/>
 				<Label Anchor="L,C" Offset="1,0" Font="TwCenMT18" ColorSet="Beige_Black_Alpha" FontStyle="Shadow" String="Player Name" ID="PlayerLeaderNameText"/>
 				<Label Anchor="R,L" Offset="-20,10" Font="TwCenMT14" ID="CyclePower" String="" ColorSet="Beige_Black_Alpha" FontStyle="Shadow" />
-				<Image Anchor="L,C" Offset="-62,-2" Texture="bar900x2.dds" Size="900.1" Hidden="0"/>
+				<Image Anchor="L,C" Offset="-62,32" Texture="bar900x2.dds" Size="900.1" Hidden="0"/>
 			</Stack>
 			<Stack Anchor="R,B" Offset="0,20" Padding="15" StackGrowth="Bottom" ID="LeftInfoStack" Hidden="0">
 				<Label Anchor="R,L" Offset="0,0" Font="TwCenMT14" ID="PlayerStabilityStatsText" String="STABLE" ColorSet="Beige_Black_Alpha" FontStyle="Shadow" />
 				<Label Anchor="R,L" Offset="0,0" Font="TwCenMT14" ID="PlayerGovtStatsText" String="" ColorSet="Beige_Black_Alpha" FontStyle="Shadow" />
+				<Label Anchor="R,L" Offset="0,0" Font="TwCenMT14" ID="PlayerSocStatsText" String="" ColorSet="Beige_Black_Alpha" FontStyle="Shadow" />
 				<Label Anchor="R,L" Offset="0,0" Font="TwCenMT14" ID="PlayerEcoStatsText" String="" ColorSet="Beige_Black_Alpha" FontStyle="Shadow" />
 			</Stack>
 		</Box>
@@ -49,7 +47,7 @@
 		<Label ID="PresentsLabel" Anchor="C,T" Offset="0,20" Font="TwCenMT16" FontStyle="Shadow" ColorSet="Beige_Black_Alpha" String="" />
 		<Label ID="ListNameLabel" Anchor="C,T" Offset="0,18" Font="TwCenMT22" FontStyle="Shadow" ColorSet="Beige_Black_Alpha" String="{TXT_KEY_JFD_CIVILIZATION_INFO_TITLE:upper}"/>
 
-		<ScrollPanel AutoScrollBar="0" Anchor="L,T" Offset="12,76" Size="434,708" ID="PlayerListScrollPanel" Vertical="1" >
+		<ScrollPanel AutoScrollBar="0" Anchor="L,T" Offset="18,76" Size="428,708" ID="PlayerListScrollPanel" Vertical="1" >
 			<Stack Anchor="L,T" Size="428,490" StackGrowth="B" Padding="-6" ID="PlayerListStack" />
 			<ScrollBar  Offset="508,0" Style="VertSlider" Anchor="R,C" AnchorSide="O,I" Length="708" />
 		</ScrollPanel>
@@ -195,13 +193,15 @@
 			<Label Anchor="L,C" Offset="100,-51" Font="TwCenMT16" WrapWidth="200" ColorSet="Beige_Black_Alpha" FontStyle="Shadow" String="Player Name" ID="PlayerNameText"/>
 			<Label Anchor="L,C" Offset="120,-37" Font="TwCenMT14" ColorSet="Beige_Black_Alpha" FontStyle="Shadow" String="" ID="PlayerLeaderNameText"/>
 			<Stack Anchor="L,C" Offset="122,0" Padding="5" StackGrowth="Bottom" ID="RightInfoStack" Hidden="0">
-				<Label Anchor="L,C" Offset="-5,-8" Font="TwCenMT14" ColorSet="Beige_Black_Alpha" FontStyle="Shadow" WrapWidth="140" String="Player Name" ID="PlayerCivNameText"/>
 				<Label Anchor="L,C" Offset="-15,5" Font="TwCenMT14" ID="PlayerEcoStatsText" String="" ColorSet="Beige_Black_Alpha" FontStyle="Shadow" Hidden="1"/>
 				<Label Anchor="R,L" Offset="-20,10" Font="TwCenMT14" ID="CyclePower" String="" ColorSet="Beige_Black_Alpha" FontStyle="Shadow" />
 			</Stack>
-			<Label Anchor="R,C" Offset="0,-12" Font="TwCenMT14" ColorSet="Beige_Black_Alpha" FontStyle="Shadow" WrapWidth="150" String="" ID="CyclePowerNameText" Hidden="0"/>
-			<Label Anchor="R,C" Offset="0,-2" Font="TwCenMT14" ColorSet="Beige_Black_Alpha" FontStyle="Shadow" WrapWidth="150" String="" ID="PlayerGovtNameText" Hidden="0"/>
-			<Label Anchor="R,C" Offset="0,28" Font="TwCenMT14" ColorSet="Beige_Black_Alpha" FontStyle="Shadow" WrapWidth="150" String="" ID="PlayerFactionNameText" Hidden="0"/>
+			<!--<Label Anchor="R,C" Offset="0,-12" Font="TwCenMT14" ColorSet="Beige_Black_Alpha" FontStyle="Shadow" WrapWidth="150" String="" ID="CyclePowerNameText" Hidden="0"/>-->
+			<Stack Anchor="L,C" Offset="114,-2" Padding="8" StackGrowth="Bottom" ID="StateInfoStack" Hidden="0">
+				<Label Anchor="L,C" Offset="0,0" Font="TwCenMT14" ColorSet="Beige_Black_Alpha" FontStyle="Shadow" WrapWidth="260" String="" ID="PlayerGovtNameText" Hidden="0"/>
+				<Label Anchor="L,C" Offset="0,0" Font="TwCenMT14" ColorSet="Beige_Black_Alpha" FontStyle="Shadow" WrapWidth="260" String="Player Name" ID="PlayerCivNameText"/>
+				<Label Anchor="L,C" Offset="0,0" Font="TwCenMT14" ColorSet="Beige_Black_Alpha" FontStyle="Shadow" WrapWidth="260" String="" ID="PlayerFactionNameText" Hidden="0"/>
+			</Stack>
 			<Stack Anchor="R,T" Offset="-6,66" Padding="15" StackGrowth="Bottom" ID="LeftInfoStack" Hidden="0">
 				<Label Anchor="R,L" Offset="0,-4" Font="TwCenMT14" ID="PlayerStabilityStatsText" String="STABLE" ColorSet="Beige_Black_Alpha" FontStyle="Stroke" Hidden="0"/>
 				<Label Anchor="R,L" Offset="0,0" Font="TwCenMT14" ID="PlayerGovtStatsText" String="" ColorSet="Beige_Black_Alpha" FontStyle="Shadow" Hidden="1"/>

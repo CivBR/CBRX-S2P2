@@ -167,7 +167,7 @@ function UpdateNewData(playerID, szTag)
 			
 		local strName
 		local srCivName = pPlayer:GetCivilizationDescription()
-		local strLeaderName = leaderDesc
+		local strLeaderName = "[ICON_CAPITAL] Leader: " .. leaderDesc
 		local srGovtName
 		local strGovtStatsName = ""
 		local strEcoStatsName = ""
@@ -203,8 +203,10 @@ function UpdateNewData(playerID, szTag)
 		local strFaction = ""
 		if Player.GetCurrentGovernment then		
 			governmentID = pPlayer:GetCurrentGovernment()
-			srGovtName = pPlayer:GetGovernmentName(governmentID)	
-			strGovernment = strGovernment .. "[NEWLINE][ICON_JFD_GOVERNMENT] " .. Locale.ConvertTextKey(GameInfo.JFD_Governments[governmentID].Description) 
+			-- srGovtName = pPlayer:GetGovernmentName(governmentID)	
+			srGovtName = pPlayer:GetGovernmentName(governmentID,true)	
+			-- strGovernment = strGovernment .. "[NEWLINE][ICON_JFD_GOVERNMENT] " .. Locale.ConvertTextKey(GameInfo.JFD_Governments[governmentID].Description) 
+			strGovernment = strGovernment .. "[NEWLINE][ICON_JFD_GOVERNMENT] Gov: " .. srGovtName
 			-- strGovtStatsName = strGovtStatsName .. " (" .. srGovtName .. ")" 
 			-- Controls.PlayerLeaderNameText:SetText(srGovtName)
 				
@@ -212,7 +214,14 @@ function UpdateNewData(playerID, szTag)
 			if factionID ~= -1 then
 				-- strGovtStatsName = strGovtStatsName .. "[COLOR_JFD_SOVEREIGNTY][ICON_BULLET]" .. GameInfo.JFD_Factions[factionID].IconString .. " " .. Locale.ConvertTextKey(GameInfo.JFD_Factions[factionID].Adjective) .. "[ENDCOLOR]" 
 				-- strFaction = GameInfo.JFD_Factions[factionID].IconString .. " " .. Locale.ConvertTextKey(GameInfo.JFD_Factions[factionID].Description)
-				Controls.PlayerFactionNameText:SetText("" .. GameInfo.JFD_Factions[factionID].IconString .. " " .. Locale.ConvertTextKey(GameInfo.JFD_Factions[factionID].Description))
+				-- Controls.PlayerFactionNameText:SetText("" .. GameInfo.JFD_Factions[factionID].IconString .. " " .. Locale.ConvertTextKey(GameInfo.JFD_Factions[factionID].Description))
+				local strFactionName = pPlayer:GetFactionName(factionID)
+				local strFactionDesc = Locale.ConvertTextKey(GameInfo.JFD_Factions[factionID].Description)
+				if strFactionName ~= strFactionDesc then
+					Controls.PlayerFactionNameText:SetText(GameInfo.JFD_Factions[factionID].IconString .. " Faction: " .. strFactionName .. " (" .. strFactionDesc .. ")")
+				else
+					Controls.PlayerFactionNameText:SetText(GameInfo.JFD_Factions[factionID].IconString .. " Faction: " .. strFactionName)
+				end
 				Controls.PlayerFactionNameText:SetHide(false)
 				-- Controls.RightInfoStack:ReprocessAnchoring()
 				-- strGovtStatsName = strGovtStatsName .. " (" .. pPlayer:GetFactionName(factionID) .. ")" 
@@ -396,6 +405,7 @@ function UpdateNewData(playerID, szTag)
 		end
 	end
 	
+	Controls.StateInfoStack:ReprocessAnchoring()
 	Controls.LeftInfoStack:ReprocessAnchoring()
 	Controls.RightInfoStack:ReprocessAnchoring()
 end
@@ -438,8 +448,11 @@ Events.OpenInfoCorner( nil )
 
 -------------------------------------------------
 -------------------------------------------------
+-------------------------------------------------
+-------------------------------------------------
 local g_PlayerListInstanceManager = InstanceManager:new( "PlayerEntryInstance", "PlayerEntryBox", Controls.PlayerListStack );
 function OnWorldCivsListUpdated()
+	print("OnWorldCivsListUpdated", OnWorldCivsListUpdated)
 	Controls.WorldCivsList:SetHide(false)
 	
 	g_PlayerListInstanceManager:ResetInstances();
@@ -447,7 +460,7 @@ function OnWorldCivsListUpdated()
 	local worldCivsTable = {}
 	local worldCivsCount = 1
 	
-	for iPlayerLoop = 0, GameDefines.MAX_MAJOR_CIVS-1, 1 do
+	for iPlayerLoop = 1, GameDefines.MAX_MAJOR_CIVS-1, 1 do
 		
 		-- Player has to be alive to be in the list
 		local pPlayer = Players[iPlayerLoop];
@@ -489,6 +502,7 @@ function OnWorldCivsListUpdated()
 		local strLeaderName = leaderDesc
 		local srGovtName
 		local strGovtStatsName = ""
+		local strSocStatsName = ""
 		local strEcoStatsName = ""
 		
 		local controlTable = g_PlayerListInstanceManager:GetInstance();
@@ -498,10 +512,20 @@ function OnWorldCivsListUpdated()
 		else
 			strName = civDesc
 		end	
+		strName = "[" .. GameInfo.PlayerColors[pPlayer:GetPlayerColor()].PrimaryColor .. "]" .. civDesc .. "[ENDCOLOR]" 
 		
+		--ICONS
 		CivIconHookup( iPlayerLoop, 32, controlTable.Icon, controlTable.CivIconBG, controlTable.CivIconShadow, false, true);  
 		IconHookup( leader.PortraitIndex, 64, leader.IconAtlas, controlTable.Portrait );
 		
+		--BACKGROUND
+		local primaryColor, secondaryColor = pPlayer:GetPlayerColors();
+		local headerColor = {x = secondaryColor.x, y = secondaryColor.y, z = secondaryColor.z, w = 1};
+		controlTable.WorldBannerHeader:SetColor(headerColor)
+		local otherColor = GameInfo.Colors["COLOR_DARK_GREY"]
+		local backgroundColor = {x = otherColor.Red, y = otherColor.Green, z = otherColor.Blue, w = 1};
+		controlTable.PlayerEntryBannerBackground:SetColor(backgroundColor)
+				
 		--CYCLES OF POWER
 		local cyclePowerID = -1
 		if Player.GetCyclePower then
@@ -519,14 +543,16 @@ function OnWorldCivsListUpdated()
 		local governmentID = -1
 		if Player.GetCurrentGovernment then		
 			governmentID = pPlayer:GetCurrentGovernment()
-			srGovtName = pPlayer:GetGovernmentName(governmentID)	
-			strGovtStatsName = strGovtStatsName .. "[COLOR_JFD_SOVEREIGNTY][ICON_BULLET][ICON_JFD_GOVERNMENT] " .. Locale.ConvertTextKey(GameInfo.JFD_Governments[governmentID].Description) .. "[ENDCOLOR]" 
-			-- strGovtStatsName = strGovtStatsName .. " (" .. srGovtName .. ")" 
-			
-			local factionID = pPlayer:GetDominantFaction()
-			if factionID ~= -1 then
-				strGovtStatsName = strGovtStatsName .. "[COLOR_JFD_SOVEREIGNTY][ICON_BULLET]" .. GameInfo.JFD_Factions[factionID].IconString .. " " .. Locale.ConvertTextKey(GameInfo.JFD_Factions[factionID].Adjective) .. "[ENDCOLOR]" 
-				-- strGovtStatsName = strGovtStatsName .. " (" .. pPlayer:GetFactionName(factionID) .. ")" 
+			if governmentID ~= -1 then
+				srGovtName = pPlayer:GetGovernmentName(governmentID)	
+				strGovtStatsName = strGovtStatsName .. "[COLOR_JFD_SOVEREIGNTY][ICON_BULLET][ICON_JFD_GOVERNMENT] " .. Locale.ConvertTextKey(GameInfo.JFD_Governments[governmentID].Description) .. "[ENDCOLOR]" 
+				-- strGovtStatsName = strGovtStatsName .. " (" .. srGovtName .. ")" 
+				
+				local factionID = pPlayer:GetDominantFaction()
+				if factionID ~= -1 then
+					strGovtStatsName = strGovtStatsName .. "[COLOR_JFD_SOVEREIGNTY][ICON_BULLET]" .. GameInfo.JFD_Factions[factionID].IconString .. " " .. Locale.ConvertTextKey(GameInfo.JFD_Factions[factionID].ShortDescription) .. "[ENDCOLOR]" 
+					-- strGovtStatsName = strGovtStatsName .. " (" .. pPlayer:GetFactionName(factionID) .. ")" 
+				end
 			end
 		end
 		
@@ -540,78 +566,50 @@ function OnWorldCivsListUpdated()
 			ideologyFont = GameInfo.PolicyBranchTypes[ideologyID].IconString
 		end
 		if ideologyID ~= -1 then
-			strGovtStatsName = strGovtStatsName .. "[COLOR_MAGENTA][ICON_BULLET]" .. ideologyFont .. " " .. Locale.ConvertTextKey(GameInfo.PolicyBranchTypes[ideologyID].Description) .. "[ENDCOLOR]	"
+			strSocStatsName = strSocStatsName .. "[COLOR_MAGENTA][ICON_BULLET]" .. ideologyFont .. " " .. Locale.ConvertTextKey(GameInfo.PolicyBranchTypes[ideologyID].Description) .. "[ENDCOLOR]	"
 		end
 		
 		--RELIGION
 		local religionID = pPlayer:GetMainReligion()
 		local religionFont = nil
-		if religionID >= 0 and pPlayer:HasCreatedPantheon() then
+		if religionID >= 0 then
 			religionFont = GameInfo.Religions[religionID].IconString
-			strGovtStatsName = strGovtStatsName .. "[COLOR_WHITE][ICON_BULLET]" .. religionFont .. Locale.ConvertTextKey(GameInfo.Religions[religionID].Description) .. "[ENDCOLOR]"
+			strSocStatsName = strSocStatsName .. "[COLOR_WHITE][ICON_BULLET]" .. religionFont .. Locale.ConvertTextKey(GameInfo.Religions[religionID].Description) .. "[ENDCOLOR]"
 		end
 		
 		--STABILITY
+		local strStability = ""
 		--Update status
-		controlTable.PlayerStabilityStatsText:LocalizeAndSetText("[ICON_HAPPINESS_1] [COLOR_HAPPINESS]STABLE[ENDCOLOR]")
-		controlTable.PlayerStabilityStatsText:LocalizeAndSetToolTip("[ICON_HAPPINESS_1] [COLOR_HAPPINESS]STABLE[ENDCOLOR]")
+		strStability = "[ICON_HAPPINESS_1] [COLOR_HAPPINESS]STABLE[ENDCOLOR]"
 		if pPlayer:IsEmpireSuperUnhappy() then
-			controlTable.PlayerStabilityStatsText:LocalizeAndSetText("[ICON_HAPPINESS_4] [COLOR_NEGATIVE_TEXT]CIVIL WAR![ENDCOLOR]")
-			controlTable.PlayerStabilityStatsText:LocalizeAndSetToolTip("[ICON_HAPPINESS_4] [COLOR_NEGATIVE_TEXT]CIVIL WAR![ENDCOLOR]")
+			strStability = "[ICON_HAPPINESS_4] [COLOR_UNHAPPINESS_4]CIVIL WAR![ENDCOLOR]"
 		end
 		if pPlayer:IsEmpireVeryUnhappy() then
-			controlTable.PlayerStabilityStatsText:LocalizeAndSetText("[ICON_HAPPINESS_4] [COLOR_NEGATIVE_TEXT]CIVIL WAR![ENDCOLOR]")
-			controlTable.PlayerStabilityStatsText:LocalizeAndSetToolTip("[ICON_HAPPINESS_4] [COLOR_NEGATIVE_TEXT]CIVIL WAR![ENDCOLOR]")
+			strStability = "[ICON_HAPPINESS_4] [COLOR_NEGATIVE_TEXT]REBELLION![ENDCOLOR]"
 		end
 		if pPlayer:IsEmpireUnhappy() then
-			controlTable.PlayerStabilityStatsText:LocalizeAndSetText("[ICON_HAPPINESS_3] [COLOR_UNHAPPINESS]REBELLION![ENDCOLOR]")
-			controlTable.PlayerStabilityStatsText:LocalizeAndSetToolTip("[ICON_HAPPINESS_3] [COLOR_UNHAPPINESS]REBELLION![ENDCOLOR]")
+			strStability = "[ICON_HAPPINESS_3] [COLOR_UNHAPPINESS_3]DISCONTENT![ENDCOLOR]"
 		end
 		if pPlayer:IsGoldenAge() then
-			controlTable.PlayerStabilityStatsText:LocalizeAndSetText("[ICON_GOLDEN_AGE] [COLOR_GOLDEN_AGE]GOLDEN AGE![ENDCOLOR]")
-			controlTable.PlayerStabilityStatsText:LocalizeAndSetToolTip("[ICON_GOLDEN_AGE] [COLOR_GOLDEN_AGE]GOLDEN AGE![ENDCOLOR]")
+			strStability = "[ICON_GOLDEN_AGE] [COLOR_GOLDEN_AGE]GOLDEN AGE![ENDCOLOR]"
 		end
 		if Player.IsDarkAge and pPlayer:IsDarkAge() then
-			controlTable.PlayerStabilityStatsText:LocalizeAndSetText("[ICON_DARK_AGE] [COLOR_DARK_AGE]DARK AGE![ENDCOLOR]")
-			controlTable.PlayerStabilityStatsText:LocalizeAndSetToolTip("[ICON_DARK_AGE] [COLOR_DARK_AGE]DARK AGE![ENDCOLOR]")
+			strStability = "[ICON_DARK_AGE] [COLOR_DARK_AGE]DARK AGE![ENDCOLOR]"
 		end
 		if pPlayer:IsAnarchy() then
-			controlTable.PlayerStabilityStatsText:LocalizeAndSetText("[ICON_RESISTANCE] [COLOR_RED]ANARCHY![ENDCOLOR]")
-			controlTable.PlayerStabilityStatsText:LocalizeAndSetToolTip("[ICON_RESISTANCE] [COLOR_RED]ANARCHY![ENDCOLOR]")
+			strStability = "[ICON_RESISTANCE] [COLOR_RED]ANARCHY![ENDCOLOR]"
 		end
+		strStability = strStability .. " [ICON_BULLET]" .. Locale.ConvertTextKey(GameInfo.Eras[pPlayer:GetCurrentEra()].Description)
+		controlTable.PlayerStabilityStatsText:LocalizeAndSetText(strStability)
+		controlTable.PlayerStabilityStatsText:LocalizeAndSetToolTip(strStability)
 		
-		--AGES
-		-- if pPlayer:IsGoldenAge() then
-			-- controlTable.AgeIcon:SetText("[ICON_GOLDEN_AGE]")
-			-- controlTable.AgeIcon:SetHide(false)
-			-- controlTable.PlayerEntryAnim:Play()
-			-- controlTable.PlayerEntryAnimGridDA:SetHide(true)
-			-- controlTable.PlayerEntryAnimGridNA:SetHide(true)
-			-- controlTable.PlayerEntryAnimGridGA:SetHide(true)
-		-- elseif Player.IsDarkAge and pPlayer:IsDarkAge() then
-			-- controlTable.AgeIcon:SetText("[ICON_DARK_AGE]")
-			-- controlTable.AgeIcon:SetHide(false)
-			-- controlTable.PlayerEntryAnim:Play()
-			-- controlTable.PlayerEntryAnimGridDA:SetHide(true)
-			-- controlTable.PlayerEntryAnimGridNA:SetHide(true)
-			-- controlTable.PlayerEntryAnimGridGA:SetHide(true)
-		-- else
-			controlTable.AgeIcon:SetHide(true)
-			controlTable.PlayerEntryAnim:Stop()
-			controlTable.PlayerEntryAnimGridDA:SetHide(true)
-			controlTable.PlayerEntryAnimGridNA:SetHide(true)
-			controlTable.PlayerEntryAnimGridGA:SetHide(true)
-		-- end
-		local primaryColor, secondaryColor = pPlayer:GetPlayerColors();
-		local backgroundColor = {x = secondaryColor.x, y = secondaryColor.y, z = secondaryColor.z, w = 0.3};
-		controlTable.PlayerEntryAnimGrid:SetColor(backgroundColor)
-			
 		--GREAT POWER STATUS
 		if Player.GetGreatPowerStatus then
 			local greatPowerStatusID = pPlayer:GetGreatPowerStatus()
 			if greatPowerStatusID ~= -1 then
 				local greatPowerStatus = GameInfo.JFD_GreatPowers[greatPowerStatusID]
-				strName = greatPowerStatus.IconString .. "[" .. greatPowerStatus.ColorString .. "]" .. strName .. "[ENDCOLOR]"
+				-- strName = greatPowerStatus.IconString .. "[" .. greatPowerStatus.ColorString .. "]" .. strName .. "[ENDCOLOR]"
+				strName = greatPowerStatus.IconString .. " " .. strName 
 				
 				-- local secondaryColor = GameInfo.Colors[greatPowerStatus.ColorString]
 				-- local backgroundColor = {x = secondaryColor.Red, y = secondaryColor.Green, z = secondaryColor.Blue, w = 0.3};
@@ -652,8 +650,17 @@ function OnWorldCivsListUpdated()
 		local numMilitaryPercent = Game.GetRound(((numMilitary/numGlobalMilitary)*100),2)
 		strEcoStatsName = strEcoStatsName .. "[ICON_BULLET]"
 		strEcoStatsName = strEcoStatsName .. "Military: " .. numMilitaryPercent .. "%" 
-			
+		
+		--RELIGION PERCENT
+		local religionID = pPlayer:GetReligionCreatedByPlayer()
+		if religionID > 0 then
+			local numReliPercent = Game.GetRound(((Game.GetNumCitiesFollowing(religionID)/Game.GetNumCities())*100),2)
+			strEcoStatsName = strEcoStatsName .. "[ICON_BULLET]"
+			strEcoStatsName = strEcoStatsName .. "Religion: " .. numReliPercent .. "%" 
+		end
+		
 		controlTable.PlayerGovtStatsText:LocalizeAndSetText(strGovtStatsName)
+		controlTable.PlayerSocStatsText:LocalizeAndSetText(strSocStatsName)
 		controlTable.PlayerEcoStatsText:LocalizeAndSetText(strEcoStatsName)
 		controlTable.PlayerEcoStatsText:LocalizeAndSetToolTip("TXT_KEY_JFD_WORLD_CIVILIZATIONS_ECO_STATS", numPlotPercent, numPopPercent, numMilitaryPercent)
 		controlTable.PlayerNameText:SetText(strName);
@@ -667,6 +674,7 @@ function OnWorldCivsListUpdated()
 	Controls.PlayerListScrollPanel:CalculateInternalSize();
 end
 Controls.WorldCivsButton:RegisterCallback( Mouse.eLClick, OnWorldCivsListUpdated );
+LuaEvents.JFD_OpenWorldCivsInterface.Add(OnWorldCivsListUpdated)
 -------------------------------------------------
 -------------------------------------------------
 function OnWorldCivsListClose()
