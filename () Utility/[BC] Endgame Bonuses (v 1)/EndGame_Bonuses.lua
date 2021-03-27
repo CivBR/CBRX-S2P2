@@ -68,7 +68,7 @@ endgameBonuses['CIVILIZATION_JFD_VANDALS_GENSERIC'] = {pop=6, food=3, prod=4, cu
 endgameBonuses['CIVILIZATION_CL_NIGERIA'] = {pop=8, food=4, prod=5, cul=5, sci=10, stg=864, gold=5, mil=10, city=8, grp=4, fai=5, reli=1}
 endgameBonuses['CIVILIZATION_DMS_ZAIRE'] = {pop=3, food=2, prod=3, cul=4, sci=8, stg=282, gold=11, mil=5, city=2, grp=4, fai=4, reli=0}
 endgameBonuses['CIVILIZATION_CSLESOTHO'] = {pop=3, food=2, prod=1, cul=1, sci=6, stg=673, gold=16, mil=4, city=3, grp=3, fai=1, reli=0}
-endgameBonuses['CIVILIZATION_JWW_UZBEKISTAN'] = {pop=3, food=2, prod=2, cul=2, sci=6, stg=40, gold=4, mil=5, city=3, grp=1, fai=2, reli=1}
+endgameBonuses['CIVILIZATION_JWW_UZBEKISTAN'] = {pop=3, food=2, prod=2, cul=2, sci=6, stg=40, gold=4, mil=4, city=3, grp=1, fai=2, reli=1}
 endgameBonuses['CIVILIZATION_JFD_PUNJAB'] = {pop=8, food=4, prod=4, cul=3, sci=9, stg=955, gold=13, mil=10, city=8, grp=4, fai=3, reli=1}
 endgameBonuses['CIVILIZATION_MC_CHOLA'] = {pop=4, food=4, prod=3, cul=3, sci=9, stg=727, gold=10, mil=7, city=3, grp=1, fai=2, reli=0}
 endgameBonuses['CIVILIZATION_EW_PARG'] = {pop=3, food=1, prod=2, cul=2, sci=6, stg=40, gold=6, mil=3, city=3, grp=2, fai=0, reli=0}
