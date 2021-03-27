@@ -17,7 +17,7 @@
 		<Row>
 			<Class>UNITCLASS_HYP_CIVIL_GUARD</Class>
 			<Type>UNIT_HYP_CIVIL_GUARD</Type>
-			<PrereqTech>NULL</PrereqTech>
+			<PrereqTech>TECH_RIFLING</PrereqTech>
 			<Combat>40</Combat>
 			<Cost>-1</Cost>
 			<Moves>2</Moves>
@@ -46,7 +46,7 @@
 		<Row>
 			<Class>UNITCLASS_HYP_RED_GUARD</Class>
 			<Type>UNIT_HYP_RED_GUARD</Type>
-			<PrereqTech>NULL</PrereqTech>
+			<PrereqTech>TECH_RIFLING</PrereqTech>
 			<Combat>30</Combat>
 			<Cost>-1</Cost>
 			<Moves>2</Moves>

@@ -127,6 +127,6 @@ VALUES	('JFD_VANDALS_GENSERIC_ALPHA_ATLAS', 		128, 		'JFD_VandalsGenseric_AlphaA
 		('JFD_VANDALS_GENSERIC_PROMOTION_ATLAS',	64, 	    'Tomatekh_PromotionAtlas_64.dds',			2, 				1),
 		('JFD_VANDALS_GENSERIC_PROMOTION_ATLAS',	45, 	    'Tomatekh_PromotionAtlas_45.dds',			2, 				1),
 		('JFD_VANDALS_GENSERIC_PROMOTION_ATLAS',	32, 	    'Tomatekh_PromotionAtlas_32.dds',			2, 				1),
-		('JFD_VANDALS_GENSERIC_UNIT_FLAG_ATLAS',	32, 		'JFD_VandalsGenseric_UnitFlagAtlas_32.dds',	1, 				1);
+		('JFD_VANDALS_GENSERIC_UNIT_FLAG_ATLAS',	32, 		'JFD_VandalsGenseric_UnitFlagAtlas_32.dds',	2, 				1);
 --==========================================================================================================================	
 --==========================================================================================================================	
