@@ -4,7 +4,7 @@
 	<Defines>
 		<Update>
 			<Where Name="MIN_CITY_RANGE"/>
-			<Set Value="2"/>
+			<Set Value="3"/>
 		</Update>
 	</Defines>
 </GameData>

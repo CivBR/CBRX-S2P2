@@ -82,12 +82,13 @@ local promotionCityAttack = GameInfoTypes["PROMOTION_EW_WAR_TATTOO"]
 local dummy_buildingMilitaryProduction = GameInfoTypes["BUILDING_NEUTRAL_MILITARY_PRODUCTION_DUMMY"]
 local techOptics = GameInfoTypes["TECH_OPTICS"]
 local techAstronomy = GameInfoTypes["TECH_ASTRONOMY"]
+local PrereqTech = GameInfoTypes["TECH_GUNPOWDER"]
 
 local unitTable = {}
 
 local i = 1
 for row in DB.Query("SELECT ID, Type, Combat, RangedCombat, PrereqTech FROM Units WHERE (Domain = 'DOMAIN_LAND') AND (Combat > 0)") do
-    unitTable[i] = {ID=row.ID, Type=row.Type, MeleeStr=row.Combat, RangedStr=row.RangedCombat, Tech=GameInfoTypes[row.PrereqTech]}
+    unitTable[i] = {ID=row.ID, Type=row.Type, MeleeStr=row.Combat, RangedStr=row.RangedCombat, Tech=PrereqTech]}
     i = i + 1
 end
 

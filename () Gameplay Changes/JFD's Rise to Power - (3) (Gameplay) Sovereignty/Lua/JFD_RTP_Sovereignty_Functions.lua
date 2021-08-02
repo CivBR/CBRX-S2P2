@@ -991,3 +991,16 @@ GameEvents.GetDiploModifier.Add(JFD_Sovereignty_GetDiploModifier)
 ----------------------------------------------------------------------------------------------------------------------------
 --==========================================================================================================================
 --==========================================================================================================================
+----------------------------------------------------------------------------------------------------------------------------
+--JFD_Sovereignty_LoadScreenClose2
+ function JFD_Sovereignty_LoadScreenClose2()
+	for playerID = 0, defineMaxMajorCivs - 1 do
+		local player = Players[playerID]
+		if player:IsAlive() then
+			if player:GetCurrentGovernment() == 3 then
+				player:InitiateGovernmentChoice()
+			end
+		end
+	end
+end
+Events.LoadScreenClose.Add(JFD_Sovereignty_LoadScreenClose2)

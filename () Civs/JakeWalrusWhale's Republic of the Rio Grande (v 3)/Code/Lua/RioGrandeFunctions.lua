@@ -87,7 +87,7 @@ local resHorse = GameInfoTypes["RESOURCE_HORSE"];
 local iHorseCount = 0;
 
 function PB_RioGrandeXPFromHorses(iPlayer)
-    local pPlayer = Players[iPlayer];    
+    local pPlayer = Players[iPlayer];
     if pPlayer:IsAlive() and pPlayer:GetCivilizationType() == iRioGrande then
         for pCity in pPlayer:Cities() do
             iHorseCount = 0
@@ -237,7 +237,7 @@ function AIBuildsPasturesRioGrande(playerID)
 								aUnitPlot:SetFeatureType(-1);
 							end
 							aUnit:Kill()
-						end						
+						end
 					end
 				end
 			end
@@ -250,31 +250,31 @@ GameEvents.PlayerDoTurn.Add(AIBuildsPasturesRioGrande)
 -- UB
 --===========================================================================
 
+-----------------------------------------------------------------------------
+-- Rivers grant Dummy Buildings with Defense
+-----------------------------------------------------------------------------
 function JWW_RGDefensePerRiver(iPlayer)
-	local pPlayer = Players[iPlayer]
-	local iNumRiverTiles = 0
-	if pPlayer:IsAlive() then
-		for pCity in pPlayer:Cities() do
-			if pCity:IsHasBuilding(iFortaleza) then
-				if pCity:IsHasBuilding(iRiverDummy) then
-					pCity:SetNumRealBuilding(iRiverDummy, 0)
-				end
-				for i = 0, pCity:GetNumCityPlots(), 1 do
+    local pPlayer = Players[iPlayer]
+    if pPlayer:IsAlive() and pPlayer:GetCivilizationType() == iRioGrande then
+        for pCity in pPlayer:Cities() do
+            local iNumRiverTiles = 0
+            pCity:SetNumRealBuilding(iRiverDummy, 0)
+            if pCity:IsHasBuilding(iFortaleza) then
+                if pCity:IsHasBuilding(iRiverDummy) then
+                    pCity:SetNumRealBuilding(iRiverDummy, 0)
+                end
+                for i = 0, pCity:GetNumCityPlots(), 1 do
                     local pCheckedPlot = pCity:GetCityIndexPlot(i)
-					if pCheckedPlot:GetWorkingCity(pCity) then
-						if pCheckedPlot:IsRiver() then
-							iNumRiverTiles = iNumRiverTiles + 1.5
-						end
-					end
-				end
-				pCity:SetNumRealBuilding(iRiverDummy, iNumRiverTiles)
-			else
-				if pCity:IsHasBuilding(iRiverDummy) then
-					pCity:SetNumRealBuilding(iRiverDummy, 0)
-				end
-			end
-		end
-	end
+                    if pCheckedPlot:GetWorkingCity(pCity) then
+                        if pCheckedPlot:IsRiver() then
+                            iNumRiverTiles = iNumRiverTiles + 1
+                        end
+                    end
+                end
+                pCity:SetNumRealBuilding(iRiverDummy, iNumRiverTiles)
+            end
+        end
+    end
 end
 
 function JWW_RGDuringWarBorderGrowthDoubled(iPlayer)
