@@ -99,32 +99,32 @@ function JWW_HereIsYourRewardDontSpendItAllInOnePlace(pPlayer, pCity)
 		if pPlayer:HasCreatedReligion() then
 			local iNum2 = JFD_GetRandom(1, 5)
 			if iNum2 == 1 then
-				local pUnit = pPlayer:InitUnit(GameInfoTypes.UNIT_SETTLER, pCity:GetX(), pCity:GetY())
-				pUnit:JumpToNearestValidPlot()
+				-- local pUnit = pPlayer:InitUnit(GameInfoTypes.UNIT_SETTLER, pCity:GetX(), pCity:GetY())
+				-- pUnit:JumpToNearestValidPlot()
 				if pPlayer:IsHuman() then
 					Events.GameplayAlertMessage('When the city of [COLOR_POSITIVE_TEXT]' .. pCity:GetName() .. '[ENDCOLOR] grew, 1 Population was sacrificed, granting the city a free [COLOR_CITY_GREEN]Settler![ENDCOLOR]')
 				end
 			elseif iNum2 == 2 then
-				local pUnit = pPlayer:InitUnit(iWorker, pCity:GetX(), pCity:GetY())
-				pUnit:JumpToNearestValidPlot()
+				-- local pUnit = pPlayer:InitUnit(iWorker, pCity:GetX(), pCity:GetY())
+				-- pUnit:JumpToNearestValidPlot()
 				if pPlayer:IsHuman() then
 					Events.GameplayAlertMessage('When the city of [COLOR_POSITIVE_TEXT]' .. pCity:GetName() .. '[ENDCOLOR] grew, 1 Population was sacrificed, granting the city a free [COLOR_CITY_GREEN]Worker![ENDCOLOR]')
 				end
 			elseif iNum2 == 3 then
-				local pUnit = pPlayer:InitUnit(GameInfoTypes.UNIT_GREAT_GENERAL, pCity:GetX(), pCity:GetY())
-				pUnit:JumpToNearestValidPlot()
+				-- local pUnit = pPlayer:InitUnit(GameInfoTypes.UNIT_GREAT_GENERAL, pCity:GetX(), pCity:GetY())
+				-- pUnit:JumpToNearestValidPlot()
 				if pPlayer:IsHuman() then
 					Events.GameplayAlertMessage('When the city of [COLOR_POSITIVE_TEXT]' .. pCity:GetName() .. '[ENDCOLOR] grew, 1 Population was sacrificed, granting the city a free [COLOR_CITY_GREEN]Great General![ENDCOLOR]')
 				end
 			elseif iNum2 == 4 then
-				local pUnit = pPlayer:InitUnit(GameInfoTypes.UNIT_CARAVAN, pCity:GetX(), pCity:GetY())
-				pUnit:JumpToNearestValidPlot()
+				-- local pUnit = pPlayer:InitUnit(GameInfoTypes.UNIT_CARAVAN, pCity:GetX(), pCity:GetY())
+				-- pUnit:JumpToNearestValidPlot()
 				if pPlayer:IsHuman() then
 					Events.GameplayAlertMessage('When the city of [COLOR_POSITIVE_TEXT]' .. pCity:GetName() .. '[ENDCOLOR] grew, 1 Population was sacrificed, granting the city a free [COLOR_CITY_GREEN]Caravan![ENDCOLOR]')
 				end
 			else
-				local pUnit = pPlayer:InitUnit(GameInfoTypes.UNIT_MISSIONARY, pCity:GetX(), pCity:GetY())
-				pUnit:JumpToNearestValidPlot()
+				-- local pUnit = pPlayer:InitUnit(GameInfoTypes.UNIT_MISSIONARY, pCity:GetX(), pCity:GetY())
+				-- pUnit:JumpToNearestValidPlot()
 				if pPlayer:IsHuman() then
 					Events.GameplayAlertMessage('When the city of [COLOR_POSITIVE_TEXT]' .. pCity:GetName() .. '[ENDCOLOR] grew, 1 Population was sacrificed, granting the city a free [COLOR_CITY_GREEN]Missionary![ENDCOLOR]')
 				end
@@ -132,26 +132,26 @@ function JWW_HereIsYourRewardDontSpendItAllInOnePlace(pPlayer, pCity)
 		else
 			local iNum2 = JFD_GetRandom(1, 4)
 			if iNum2 == 1 then
-				local pUnit = pPlayer:InitUnit(GameInfoTypes.UNIT_SETTLER, pCity:GetX(), pCity:GetY())
-				pUnit:JumpToNearestValidPlot()
+				-- local pUnit = pPlayer:InitUnit(GameInfoTypes.UNIT_SETTLER, pCity:GetX(), pCity:GetY())
+				-- pUnit:JumpToNearestValidPlot()
 				if pPlayer:IsHuman() then
 					Events.GameplayAlertMessage('When the city of [COLOR_POSITIVE_TEXT]' .. pCity:GetName() .. '[ENDCOLOR] grew, 1 Population was sacrificed, granting the city a free [COLOR_CITY_GREEN]Settler![ENDCOLOR]')
 				end
 			elseif iNum2 == 2 then
-				local pUnit = pPlayer:InitUnit(GameInfoTypes.UNIT_WORKER, pCity:GetX(), pCity:GetY())
-				pUnit:JumpToNearestValidPlot()
+				-- local pUnit = pPlayer:InitUnit(GameInfoTypes.UNIT_WORKER, pCity:GetX(), pCity:GetY())
+				-- pUnit:JumpToNearestValidPlot()
 				if pPlayer:IsHuman() then
 					Events.GameplayAlertMessage('When the city of [COLOR_POSITIVE_TEXT]' .. pCity:GetName() .. '[ENDCOLOR] grew, 1 Population was sacrificed, granting the city a free [COLOR_CITY_GREEN]Worker![ENDCOLOR]')
 				end
 			elseif iNum2 == 3 then
-				local pUnit = pPlayer:InitUnit(GameInfoTypes.UNIT_GREAT_GENERAL, pCity:GetX(), pCity:GetY())
-				pUnit:JumpToNearestValidPlot()
+				-- local pUnit = pPlayer:InitUnit(GameInfoTypes.UNIT_GREAT_GENERAL, pCity:GetX(), pCity:GetY())
+				-- pUnit:JumpToNearestValidPlot()
 				if pPlayer:IsHuman() then
 					Events.GameplayAlertMessage('When the city of [COLOR_POSITIVE_TEXT]' .. pCity:GetName() .. '[ENDCOLOR] grew, 1 Population was sacrificed, granting the city a free [COLOR_CITY_GREEN]Great General![ENDCOLOR]')
 				end
 			else
-				local pUnit = pPlayer:InitUnit(GameInfoTypes.UNIT_CARAVAN, pCity:GetX(), pCity:GetY())
-				pUnit:JumpToNearestValidPlot()
+				-- local pUnit = pPlayer:InitUnit(GameInfoTypes.UNIT_CARAVAN, pCity:GetX(), pCity:GetY())
+				-- pUnit:JumpToNearestValidPlot()
 				if pPlayer:IsHuman() then
 					Events.GameplayAlertMessage('When the city of [COLOR_POSITIVE_TEXT]' .. pCity:GetName() .. '[ENDCOLOR] grew, 1 Population was sacrificed, granting the city a free [COLOR_CITY_GREEN]Caravan![ENDCOLOR]')
 				end
@@ -318,9 +318,9 @@ function PB_SerialEventUnitInfoDirty()
 	else
 		Controls.UnitActionButton:SetHide(true)
 	end
-	
+
 	local buildCityButtonActive = uUnit:IsFound();
-				
+
 	local primaryStack = ContextPtr:LookUpControl("/InGame/WorldView/UnitPanel/PrimaryStack")
 	local primaryStretchy = ContextPtr:LookUpControl("/InGame/WorldView/UnitPanel/PrimaryStretchy")
 	primaryStack:CalculateSize();
@@ -353,7 +353,7 @@ local function PB_UpdateUnitInfoPanel()
 	Controls.UnitActionButton:ChangeParent(ContextPtr:LookUpControl("/InGame/WorldView/UnitPanel/PrimaryStack"))
 end
 
-local function PB_Initialize()	
+local function PB_Initialize()
 	Events.LoadScreenClose.Add(PB_UpdateUnitInfoPanel);
 	Events.SerialEventUnitInfoDirty.Add(PB_SerialEventUnitInfoDirty);
 end
