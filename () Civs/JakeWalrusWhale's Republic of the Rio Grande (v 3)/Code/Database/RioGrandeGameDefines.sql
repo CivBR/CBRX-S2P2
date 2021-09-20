@@ -24,15 +24,15 @@ INSERT INTO BuildingClasses
 VALUES	('BUILDINGCLASS_JWW_RG_FC_RIVER_DUMMY', 		'BUILDING_JWW_RG_FC_RIVER_DUMMY', 		'TXT_KEY_BUILDING_JWW_RG_FC_RIVER_DUMMY'),
 		('BUILDINGCLASS_JWW_RG_UA_DUMMY',				'BUILDING_JWW_RG_UA_DUMMY',				'TXT_KEY_BUILDING_JWW_RG_UA_DUMMY');
 
-INSERT INTO Buildings		
+INSERT INTO Buildings
 		(Type, 									BuildingClass,									PrereqTech,		Cost,	FaithCost,	GreatWorkCount,	NeverCapture,	NukeImmune,	Defense,	ExtraCityHitPoints,	PortraitIndex,	IconAtlas,		Description)
-VALUES	('BUILDING_JWW_RG_FC_RIVER_DUMMY',		'BUILDINGCLASS_JWW_RG_FC_RIVER_DUMMY',			'NULL', 		-1,		-1,			-1,				1,				1,			100,		5,					19,				'BW_ATLAS_1',	'TXT_KEY_BUILDING_JWW_RG_FC_RIVER_DUMMY');
+VALUES	('BUILDING_JWW_RG_FC_RIVER_DUMMY',		'BUILDINGCLASS_JWW_RG_FC_RIVER_DUMMY',			'NULL', 		-1,		-1,			-1,				1,				1,			100,		10,					19,				'BW_ATLAS_1',	'TXT_KEY_BUILDING_JWW_RG_FC_RIVER_DUMMY');
 
-INSERT INTO Buildings      
+INSERT INTO Buildings
         (TYPE,                              BuildingClass,                          Cost,  FaithCost, GreatWorkCount,   NeverCapture,  Description)
 VALUES  ('BUILDING_JWW_RG_UA_DUMMY',		'BUILDINGCLASS_JWW_RG_UA_DUMMY',        -1,    -1,        -1,               1,             'TXT_KEY_BUILDING_JWW_RG_UA_DUMMY');
 
-INSERT INTO Building_UnitCombatFreeExperiences  
+INSERT INTO Building_UnitCombatFreeExperiences
         (BuildingType,                    UnitCombatType,							Experience)
 VALUES  ('BUILDING_JWW_RG_UA_DUMMY',	 'UNITCOMBAT_MELEE',                         3),
         ('BUILDING_JWW_RG_UA_DUMMY',	 'UNITCOMBAT_RECON',                         3),
@@ -262,7 +262,7 @@ VALUES	('CIVILIZATION_JWW_RIO_GRANDE',	'TXT_KEY_CITY_NAME_JWW_RIO_GRANDE_0'),
 		('CIVILIZATION_JWW_RIO_GRANDE',	'TXT_KEY_CITY_NAME_JWW_RIO_GRANDE_40'),
 		('CIVILIZATION_JWW_RIO_GRANDE',	'TXT_KEY_CITY_NAME_JWW_RIO_GRANDE_41'),
 		('CIVILIZATION_JWW_RIO_GRANDE',	'TXT_KEY_CITY_NAME_JWW_RIO_GRANDE_42');
-				
+
 INSERT INTO Civilization_SpyNames
 		(CivilizationType,					SpyName)
 VALUES	('CIVILIZATION_JWW_RIO_GRANDE',		'TXT_KEY_SPY_NAME_JWW_RIO_GRANDE_0'),
