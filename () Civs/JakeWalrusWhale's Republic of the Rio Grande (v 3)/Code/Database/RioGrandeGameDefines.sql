@@ -26,7 +26,7 @@ VALUES	('BUILDINGCLASS_JWW_RG_FC_RIVER_DUMMY', 		'BUILDING_JWW_RG_FC_RIVER_DUMMY
 
 INSERT INTO Buildings
 		(Type, 									BuildingClass,									PrereqTech,		Cost,	FaithCost,	GreatWorkCount,	NeverCapture,	NukeImmune,	Defense,	ExtraCityHitPoints,	PortraitIndex,	IconAtlas,		Description)
-VALUES	('BUILDING_JWW_RG_FC_RIVER_DUMMY',		'BUILDINGCLASS_JWW_RG_FC_RIVER_DUMMY',			'NULL', 		-1,		-1,			-1,				1,				1,			100,		10,					19,				'BW_ATLAS_1',	'TXT_KEY_BUILDING_JWW_RG_FC_RIVER_DUMMY');
+VALUES	('BUILDING_JWW_RG_FC_RIVER_DUMMY',		'BUILDINGCLASS_JWW_RG_FC_RIVER_DUMMY',			'NULL', 		-1,		-1,			-1,				1,				1,			100,		5,					19,				'BW_ATLAS_1',	'TXT_KEY_BUILDING_JWW_RG_FC_RIVER_DUMMY');
 
 INSERT INTO Buildings
         (TYPE,                              BuildingClass,                          Cost,  FaithCost, GreatWorkCount,   NeverCapture,  Description)
