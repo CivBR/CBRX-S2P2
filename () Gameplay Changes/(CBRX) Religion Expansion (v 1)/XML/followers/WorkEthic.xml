@@ -9,7 +9,7 @@
 			<Follower>true</Follower>
 		</Row>
 	</Beliefs>
-	
+
 	<Belief_SpecialistYieldChanges>
 		<Row>
 			<BeliefType>BELIEF_WORKETHIC</BeliefType>
@@ -39,5 +39,5 @@
 			<Text>Work Ethic</Text>
 		</Row>
 	</Language_en_US>
-	
+
 </GameData>
