@@ -24,7 +24,7 @@
 			<DefaultBuilding>BUILDING_FW_AQUACULTURE_LAB</DefaultBuilding>
 			<Description>TXT_KEY_BUILDING_FW_AQUACULTURE_LAB</Description>
 		</Row>
-		
+
 		<Row>
 			<Type>BUILDINGCLASS_FW_GENE_LAB</Type>
 			<DefaultBuilding>BUILDING_FW_GENE_LAB</DefaultBuilding>
@@ -82,7 +82,7 @@
 			<DefaultBuilding>BUILDING_FW_CRECHE</DefaultBuilding>
 			<Description>TXT_KEY_BUILDING_FW_CRECHE</Description>
 		</Row>
-		
+
 		<Row>
 			<Type>BUILDINGCLASS_FW_SANCTUARY</Type>
 			<DefaultBuilding>BUILDING_FW_SANCTUARY</DefaultBuilding>
@@ -310,7 +310,7 @@
 			<DefaultBuilding>BUILDING_FW_METROPLEX_HUB_DUMMY</DefaultBuilding>
 			<Description>TXT_KEY_BUILDING_FW_METROPLEX_HUB_DUMMY</Description>
 		</Row>
-		
+
 		<Row>
 			<Type>BUILDINGCLASS_FW_VERTICAL_FARM</Type>
 			<DefaultBuilding>BUILDING_FW_VERTICAL_FARM</DefaultBuilding>
@@ -359,7 +359,7 @@
 			<DefaultBuilding>BUILDING_FW_COMM_MODULE_1</DefaultBuilding>
 			<Description>TXT_KEY_BUILDING_FW_RESEARCH_MODULE</Description>
 		</Row>
-		
+
 		<Row>
 			<Type>BUILDINGCLASS_FW_LAUNCH_FACILITY</Type>
 			<DefaultBuilding>BUILDING_FW_LAUNCH_FACILITY</DefaultBuilding>
@@ -446,7 +446,7 @@
 			<Description>TXT_KEY_BUILDING_FW_ASTEROID_MINING_3</Description>
 			<MaxPlayerInstances>1</MaxPlayerInstances>
 		</Row>
-		
+
 	</BuildingClasses>
 	<Buildings>
 		<Row>
@@ -504,7 +504,7 @@
 			<IconAtlas>CIV_COLOR_ATLAS_FW_2</IconAtlas>
 			<PortraitIndex>50</PortraitIndex>
 		</Row>
-		
+
 		<Row>
 			<Type>BUILDING_FW_AQUACULTURE_LAB</Type>
 			<BuildingClass>BUILDINGCLASS_FW_AQUACULTURE_LAB</BuildingClass>
@@ -575,7 +575,7 @@
 			<Strategy>TXT_KEY_BUILDING_FW_CLONE_LAB_STRATEGY</Strategy>
 			<ArtDefineTag>ART_DEF_BUILDING_LABORATORY</ArtDefineTag>
 			<MinAreaSize>-1</MinAreaSize>
-			<FoodKept>15</FoodKept>
+			<FoodKept>0</FoodKept>
 			<ConquestProb>50</ConquestProb>
 			<HurryCostModifier>0</HurryCostModifier>
 			<IconAtlas>CIV_COLOR_ATLAS_FW_2</IconAtlas>
@@ -853,7 +853,7 @@
 			<IconAtlas>CIV_COLOR_ATLAS_FW_2</IconAtlas>
 			<PortraitIndex>33</PortraitIndex>
 		</Row>
-		
+
 		<Row>
 			<Type>BUILDING_FW_NETWORK_BACKBONE</Type>
 			<BuildingClass>BUILDINGCLASS_FW_NETWORK_BACKBONE</BuildingClass>
@@ -1068,7 +1068,7 @@
 			<IconAtlas>CIV_COLOR_ATLAS_FW_3</IconAtlas>
 			<PortraitIndex>3</PortraitIndex>
 		</Row>
-		
+
 		<Row>
 			<Type>BUILDING_FW_FUSION_PLANT</Type>
 			<BuildingClass>BUILDINGCLASS_FW_FUSION_PLANT</BuildingClass>
@@ -1286,7 +1286,7 @@
 			<IconAtlas>CIV_COLOR_ATLAS_FW</IconAtlas>
 			<PortraitIndex>4</PortraitIndex>
 		</Row>
-		
+
 		<Row>
 			<Type>BUILDING_FW_UNDERSEA_MINING</Type>
 			<BuildingClass>BUILDINGCLASS_FW_UNDERSEA_MINING</BuildingClass>
@@ -1548,7 +1548,7 @@
 			<IconAtlas>CIV_COLOR_ATLAS_FW_2</IconAtlas>
 			<PortraitIndex>60</PortraitIndex>
 		</Row>
-		
+
 		<Row>
 			<Type>BUILDING_FW_ORBITAL_HABITAT</Type>
 			<BuildingClass>BUILDINGCLASS_FW_ORBITAL_HABITAT</BuildingClass>
@@ -1959,7 +1959,7 @@
 		<Row>
 			<BuildingType>BUILDING_FW_ENTERTAINMENT_SERVER</BuildingType>
 			<BuildingClassType>BUILDINGCLASS_BROADCAST_TOWER</BuildingClassType>
-		</Row>		
+		</Row>
 		<Row>
 			<BuildingType>BUILDING_FW_ENTERTAINMENT_SERVER</BuildingType>
 			<BuildingClassType>BUILDINGCLASS_FW_SERVER_HUB</BuildingClassType>
@@ -1996,12 +1996,12 @@
 			<BuildingType>BUILDING_FW_UNDERSEA_MINING</BuildingType>
 			<BuildingClassType>BUILDINGCLASS_HARBOR</BuildingClassType>
 		</Row>
-		
+
 		<Row>
 			<BuildingType>BUILDING_FW_VR_TRAINING</BuildingType>
 			<BuildingClassType>BUILDINGCLASS_MILITARY_ACADEMY</BuildingClassType>
 		</Row>
-		
+
 		<Row>
 			<BuildingType>BUILDING_FW_NANOFORGE</BuildingType>
 			<BuildingClassType>BUILDINGCLASS_FW_AUTOPLANT</BuildingClassType>
@@ -2304,7 +2304,7 @@
 			<FlavorType>FLAVOR_PRODUCTION</FlavorType>
 			<Flavor>50</Flavor>
 		</Row>
-		
+
 		<Row>
 			<BuildingType>BUILDING_FW_CLONE_LAB</BuildingType>
 			<FlavorType>FLAVOR_PRODUCTION</FlavorType>
@@ -2345,7 +2345,7 @@
 			<FlavorType>FLAVOR_MILITARY_TRAINING</FlavorType>
 			<Flavor>60</Flavor>
 		</Row>
-		
+
 		<Row>
 			<BuildingType>BUILDING_FW_NANOMAT_PLANT</BuildingType>
 			<FlavorType>FLAVOR_PRODUCTION</FlavorType>
@@ -2421,7 +2421,7 @@
 			<FlavorType>FLAVOR_GOLD</FlavorType>
 			<Flavor>30</Flavor>
 		</Row>
-		
+
 		<Row>
 			<BuildingType>BUILDING_FW_SERVER_HUB</BuildingType>
 			<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -2532,7 +2532,7 @@
 			<FlavorType>FLAVOR_CULTURE</FlavorType>
 			<Flavor>30</Flavor>
 		</Row>
-		
+
 		<Row>
 			<BuildingType>BUILDING_FW_AUTOPLANT</BuildingType>
 			<FlavorType>FLAVOR_PRODUCTION</FlavorType>
@@ -2569,13 +2569,13 @@
 			<FlavorType>FLAVOR_GROWTH</FlavorType>
 			<Flavor>50</Flavor>
 		</Row>
-		
+
 		<Row>
 			<BuildingType>BUILDING_FW_ALLOY_FOUNDRY</BuildingType>
 			<FlavorType>FLAVOR_PRODUCTION</FlavorType>
 			<Flavor>40</Flavor>
 		</Row>
-		
+
 		<Row>
 			<BuildingType>BUILDING_FW_FEEDSITE_HUB</BuildingType>
 			<FlavorType>FLAVOR_CULTURE</FlavorType>
@@ -2752,25 +2752,25 @@
 			<BuildingType>BUILDING_FW_CLONE_LAB</BuildingType>
 			<ResourceType>RESOURCE_SHEEP</ResourceType>
 			<YieldType>YIELD_FOOD</YieldType>
-			<Yield>2</Yield>
+			<Yield>3</Yield>
 		</Row>
 		<Row>
 			<BuildingType>BUILDING_FW_CLONE_LAB</BuildingType>
 			<ResourceType>RESOURCE_HORSE</ResourceType>
 			<YieldType>YIELD_PRODUCTION</YieldType>
-			<Yield>2</Yield>
+			<Yield>3</Yield>
 		</Row>
 		<Row>
 			<BuildingType>BUILDING_FW_CLONE_LAB</BuildingType>
 			<ResourceType>RESOURCE_BISON</ResourceType>
 			<YieldType>YIELD_PRODUCTION</YieldType>
-			<Yield>2</Yield>
+			<Yield>3</Yield>
 		</Row>
 		<Row>
 			<BuildingType>BUILDING_FW_CLONE_LAB</BuildingType>
 			<ResourceType>RESOURCE_COW</ResourceType>
 			<YieldType>YIELD_FOOD</YieldType>
-			<Yield>2</Yield>
+			<Yield>3</Yield>
 		</Row>
 		<Row>
 			<BuildingType>BUILDING_FW_GENE_LAB</BuildingType>
@@ -3046,7 +3046,7 @@
 			<YieldType>YIELD_GOLD</YieldType>
 			<Yield>2</Yield>
 		</Row>
-			
+
 		<Row>
 			<BuildingType>BUILDING_FW_AUTOPLANT</BuildingType>
 			<YieldType>YIELD_PRODUCTION</YieldType>
@@ -3108,7 +3108,7 @@
 			<YieldType>YIELD_FOOD</YieldType>
 			<Yield>1</Yield>
 		</Row>
-		
+
 		<Row>
 			<BuildingType>BUILDING_FW_FUSION_PLANT</BuildingType>
 			<YieldType>YIELD_PRODUCTION</YieldType>
@@ -3119,7 +3119,7 @@
 			<YieldType>YIELD_CULTURE</YieldType>
 			<Yield>2</Yield>
 		</Row>
-		
+
 		<Row>
 			<BuildingType>BUILDING_FW_SHIMIZUMCP_DUMMY</BuildingType>
 			<YieldType>YIELD_GOLD</YieldType>
@@ -3285,7 +3285,7 @@
 			<YieldType>YIELD_PRODUCTION</YieldType>
 			<Yield>30</Yield>
 		</Row>
-		
+
 		<Row>
 			<BuildingType>BUILDING_FW_IMPLANT_CLINIC</BuildingType>
 			<YieldType>YIELD_PRODUCTION</YieldType>

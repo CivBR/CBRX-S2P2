@@ -9,7 +9,7 @@
 			<Follower>true</Follower>
 		</Row>
 	</Beliefs>
-  
+
 	<Belief_BuildingClassFaithPurchase>
 		<Row>
 			<BeliefType>BELIEF_GGANTIJAS</BeliefType>
@@ -40,10 +40,9 @@
 			<NeverCapture>false</NeverCapture>
 			<ConquestProb>66</ConquestProb>
 			<PortraitIndex>33</PortraitIndex>
-			<FoodKept>10</FoodKept>
 		</Row>
 	</Buildings>
-  
+
   	<Building_Flavors>
 		<Row>
 			<BuildingType>BUILDING_GGANTIJAS</BuildingType>
@@ -56,12 +55,12 @@
 			<Flavor>4</Flavor>
 		</Row>
 	</Building_Flavors>
-  
+
 	<Building_YieldChanges>
 		<Row>
 			<BuildingType>BUILDING_GGANTIJAS</BuildingType>
 			<YieldType>YIELD_FOOD</YieldType>
-			<Yield>2</Yield>
+			<Yield>3</Yield>
 		</Row>
 		<Row>
 			<BuildingType>BUILDING_GGANTIJAS</BuildingType>
@@ -72,7 +71,7 @@
 
 	<Language_en_US>
 		<Row Tag="TXT_KEY_BELIEF_GGANTIJAS">
-			<Text>Use [ICON_PEACE] Faith to purchase Ggantijas (+2 [ICON_FOOD] Food, +2 [ICON_PEACE] Faith, 10% [ICON_FOOD] Food is carried over after a new Citizen is born).</Text>
+			<Text>Use [ICON_PEACE] Faith to purchase Ggantijas (+3 [ICON_FOOD] Food and +2 [ICON_PEACE] Faith.</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BELIEF_GGANTIJAS_SHORT">
 			<Text>Ggantijas</Text>

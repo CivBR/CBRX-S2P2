@@ -101,6 +101,7 @@ local sailing = GameInfoTypes["TECH_SAILING"]
 local optics = GameInfoTypes["TECH_OPTICS"]
 local bronze = GameInfoTypes["TECH_BRONZE_WORKING"]
 
+local dummy_populationBuilding = GameInfoTypes["BUILDING_LIME_ENDGAME_POPULATION"]
 local dummy_foodBuilding = GameInfoTypes["BUILDING_LIME_ENDGAME_FOOD"]
 local dummy_productionBuilding = GameInfoTypes["BUILDING_LIME_ENDGAME_PRODUCTION"]
 local dummy_cultureBuilding = GameInfoTypes["BUILDING_LIME_ENDGAME_CULTURE"]
@@ -116,6 +117,7 @@ local unitWorker = GameInfoTypes["UNIT_WORKER"]
 
 local function Lime_GiveTurnBonuses(city, sCivilizationType)
 	dprint("amount of food: " .. endgameBonuses[sCivilizationType].food)
+	city:SetNumRealBuilding(dummy_populationBuilding, endgameBonuses[sCivilizationType].pop)
 	city:SetNumRealBuilding(dummy_foodBuilding, endgameBonuses[sCivilizationType].food)
 	city:SetNumRealBuilding(dummy_productionBuilding, endgameBonuses[sCivilizationType].prod)
 	city:SetNumRealBuilding(dummy_cultureBuilding, endgameBonuses[sCivilizationType].cul)

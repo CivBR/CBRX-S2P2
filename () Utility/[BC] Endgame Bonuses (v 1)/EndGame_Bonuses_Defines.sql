@@ -41,7 +41,7 @@ VALUES	('BUILDING_LIME_ENDGAME_FOOD',			'FLAVOR_GROWTH',	1),
 		('BUILDING_LIME_ENDGAME_CULTURE',		'FLAVOR_GROWTH',	1),
 		('BUILDING_LIME_ENDGAME_GOLD',			'FLAVOR_GROWTH',	1),
 		('BUILDING_LIME_ENDGAME_FAITH',			'FLAVOR_GROWTH',	1);
-		
+
 --==========================================================================================================================
 -- POLICIES
 --==========================================================================================================================
@@ -58,10 +58,10 @@ VALUES	('POLICY_LIME_TECH_DUMMY_1', 	'TXT_KEY_POLICY_LIME_TECH_DUMMY_1', 'TXT_KE
 		('POLICY_LIME_TECH_DUMMY_8', 	'TXT_KEY_POLICY_LIME_TECH_DUMMY_8', 'TXT_KEY_POLICY_LIME_TECH_DUMMY_8', 	'TXT_KEY_POLICY_LIME_TECH_DUMMY_8', 1000, 1000, 	8, 				47, 			'POLICY_ATLAS', 'POLICY_A_ATLAS'),
 		('POLICY_LIME_TECH_DUMMY_9', 	'TXT_KEY_POLICY_LIME_TECH_DUMMY_9', 'TXT_KEY_POLICY_LIME_TECH_DUMMY_9', 	'TXT_KEY_POLICY_LIME_TECH_DUMMY_9', 1000, 1000, 	9, 				47, 			'POLICY_ATLAS', 'POLICY_A_ATLAS'),
 		('POLICY_LIME_TECH_DUMMY_10', 	'TXT_KEY_POLICY_LIME_TECH_DUMMY_10','TXT_KEY_POLICY_LIME_TECH_DUMMY_10', 	'TXT_KEY_POLICY_LIME_TECH_DUMMY_10',1000, 1000, 	10, 			47, 			'POLICY_ATLAS', 'POLICY_A_ATLAS');
-		
+
 --==========================================================================================================================
 -- AI BONUSES
---==========================================================================================================================	
+--==========================================================================================================================
 UPDATE HandicapInfos SET AIStartingWorkerUnits = 0 WHERE Type = "HANDICAP_DEITY";
 UPDATE HandicapInfos SET AIStartingDefenseUnits = 0 WHERE Type = "HANDICAP_DEITY";
 UPDATE HandicapInfos SET AIStartingExploreUnits = 0 WHERE Type = "HANDICAP_DEITY";
