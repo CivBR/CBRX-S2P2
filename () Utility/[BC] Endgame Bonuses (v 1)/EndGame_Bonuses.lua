@@ -39,7 +39,7 @@ cbrxTSLs["CIVILIZATION_GREATEREUROPE_GERMANY"] = {X = 11, Y = 43, S = "F", O = "
 cbrxTSLs["CIVILIZATION_SF_KOSOVO"] = {X = 21, Y = 38, S = "F", O = "F"}
 cbrxTSLs["CIVILIZATION_FINNS"] = {X = 15, Y = 58, S = "F", O = "F"}
 cbrxTSLs["CIVILIZATION_JFD_SOVIET_RUSSIA_LENIN"] = {X = 23, Y = 48, S = "F", O = "F"}
-cbrxTSLs["CIVILIZATION_JFD_VANDALS_GENSERIC"] = {X = 11, Y = 31, S = "T", O = "F"}
+cbrxTSLs["CIVILIZATION_JFD_VANDALS_GENSERIC"] = {X = 11, Y = 31, S = "F", O = "F"}
 cbrxTSLs["CIVILIZATION_CL_NIGERIA"] = {X = 12, Y = 20, S = "F", O = "F"}
 cbrxTSLs["CIVILIZATION_DMS_ZAIRE"] = {X = 20, Y = 19, S = "F", O = "F"}
 cbrxTSLs["CIVILIZATION_CSLESOTHO"] = {X = 18, Y = 5, S = "F", O = "F"}
@@ -64,7 +64,7 @@ endgameBonuses['CIVILIZATION_GREATEREUROPE_GERMANY'] = {pop=4, food=4, prod=3, c
 endgameBonuses['CIVILIZATION_SF_KOSOVO'] = {pop=1, food=1, prod=1, cul=1, sci=1, stg=600, gold=3, mil=1, city=2, grp=0, fai=0, reli=0}
 endgameBonuses['CIVILIZATION_FINNS'] = {pop=1, food=1, prod=1, cul=1, sci=5, stg=700, gold=5, mil=2, city=2, grp=0, fai=2, reli=1}
 endgameBonuses['CIVILIZATION_JFD_SOVIET_RUSSIA_LENIN'] = {pop=5, food=3, prod=3, cul=3, sci=8, stg=100, gold=8, mil=9, city=7, grp=5, fai=2, reli=0}
-endgameBonuses['CIVILIZATION_JFD_VANDALS_GENSERIC'] = {pop=6, food=4, prod=4, cul=4, sci=8, stg=100, gold=10, mil=6, city=6, grp=4, fai=3, reli=0}
+endgameBonuses['CIVILIZATION_JFD_VANDALS_GENSERIC'] = {pop=6, food=4, prod=4, cul=4, sci=8, stg=100, gold=10, mil=7, city=7, grp=4, fai=2, reli=0}
 endgameBonuses['CIVILIZATION_CL_NIGERIA'] = {pop=7, food=5, prod=5, cul=5, sci=10, stg=400, gold=21, mil=10, city=9, grp=4, fai=5, reli=1}
 endgameBonuses['CIVILIZATION_DMS_ZAIRE'] = {pop=1, food=2, prod=2, cul=4, sci=8, stg=400, gold=5, mil=4, city=3, grp=4, fai=2, reli=0}
 endgameBonuses['CIVILIZATION_CSLESOTHO'] = {pop=5, food=3, prod=2, cul=2, sci=6, stg=100, gold=7, mil=7, city=6, grp=3, fai=1, reli=0}
